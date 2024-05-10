@@ -332,9 +332,9 @@ navigate('/');
   }, [token]);
 
   return (
-    <div className="mt-24">
-      <div className="flex flex-wrap lg:flex-nowrap justify-center">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-no-repeat bg-cover bg-center" style={{ backgroundImage: `url(${earningsImage})` }}>
+    <div className="mt-5 px-5">
+      <div className="flex flex-col lg:flex-nowrap justify-center">
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full m-auto lg:w-80 p-8 pt-9  bg-no-repeat bg-cover bg-center" style={{ backgroundImage: `url(${earningsImage})` }}>
           <div className="flex justify-between items-center">
             <div>
               <p className="font-bold text-gray-400">Earnings</p>
@@ -348,18 +348,11 @@ navigate('/');
               <BsCurrencyDollar />
             </button>
           </div>
-          <div className="mt-6">
-            <Button
-              color="white"
-              bgColor={currentColor}
-              text="Download"
-              borderRadius="10px"
-            />
-          </div>
+        
         </div>
-        <div className="flex m-3 flex-wrap justify-center gap-1 items-center">
+        <div className="grid grid-cols-1 gap-2 p-5">
           {earningData.map((item, index) => (
-            <div key={index} className="bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl">
+            <div key={index} className="bg-gray-200 h-44 dark:text-gray-200 dark:bg-secondary-dark-bg  p-4 pt-9 rounded-2xl flex flex-col items-center ">
               <button
                 type="button"
                 style={{ color: item.iconColor, backgroundColor: item.iconBg }}
@@ -367,54 +360,52 @@ navigate('/');
               >
                 {item.icon}
               </button>
-              <p className="mt-3">
+              <p className="mt-3 text-gray-600">
                 <span className="text-lg font-semibold">{errorMessage ? `Error fetching ${item.title}` : (index === 0 ? registeredUsers : index === 1 ? bookings : index === 2 ? registeredSwimmers : bookedSwimmers)}</span>
-                <span className={`text-sm text-${item.pcColor} ml-2`}>
-                  {item.percentage}
+                <span className={`text-sm text-black  ml-2`}>
+                  {item.percentage} 
                 </span>
               </p>
-              <p className="text-sm text-gray-400 mt-1">{item.title}</p>
+              <p className="text-sm text-gray-700 mt-1">{item.title}</p>
             </div>
           ))}
         </div>
       </div>
-      <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780">
-        <div className="w-3/4 md:w-full mx-auto">
+        <div className="w-3/4  mx-auto">
           <h2 className="text-xl font-semibold mb-4">Booking Status</h2>
           <table className="w-full border-collapse border border-gray-300 text-center">
             <thead>
               <tr className="bg-gray-200">
-                <th className="border border-gray-300 p-2">Status</th>
-                <th className="border border-gray-300 p-2">Count</th>
+                <th className="border border-gray-300 p-2 text-black">Status</th>
+                <th className="border border-gray-300 p-2 text-black">Count</th>
               </tr>
             </thead>
             <tbody>
               {ecomPieChartData.map((item, index) => (
                 <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-100'}>
-                  <td className="border border-gray-300 p-2">{item.x}</td>
-                  <td className="border border-gray-300 p-2">{item.y}</td>
+                  <td className="border border-gray-300 p-2 text-gray-700">{item.x}</td>
+                  <td className="border border-gray-300 p-2 text-gray-700">{item.y}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
 
-      </div>
       {/* Responsive table */}
-      <div className="mt-8">
+      <div className="mt-8 w-3/4  mx-auto">
         <h2 className="text-xl font-semibold mb-4">Teams</h2>
         <table className="w-full border-collapse border border-gray-300 text-center">
           <thead>
             <tr className="bg-gray-200">
-              <th className="border border-gray-300 p-2">Team</th>
-              <th className="border border-gray-300 p-2">Users</th>
+              <th className="border border-gray-300 p-2 text-black">Team</th>
+              <th className="border border-gray-300 p-2 text-black">Users</th>
             </tr>
           </thead>
           <tbody>
             {teamData.map((team, index) => (
               <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-100'}>
-                <td className="border border-gray-300 p-2">{team.name}</td>
-                <td className="border border-gray-300 p-2">{team.users}</td>
+                <td className="border border-gray-300 p-2 text-gray-700">{team.name}</td>
+                <td className="border border-gray-300 p-2 text-gray-700">{team.users}</td>
               </tr>
             ))}
           </tbody>

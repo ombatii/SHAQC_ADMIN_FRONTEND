@@ -80,7 +80,7 @@ const Parents = () => {
   const parentToUpdate = parentData ? parentData.find(parent => parent.parentId === id) : null;
 
   return (
-    <>
+    <div className="mx-4 overflow-x-scroll">
       <ParentModal
         active={activeModal}
         handleModal={handleModal}
@@ -137,7 +137,7 @@ const Parents = () => {
                     )}
                   </ul>
                 </td>
-                <td>
+                <td className="grid grid-cols-2">
                   <button
                     className="button mr-2 is-info is-light"
                     onClick={() => handleUpdate(parent.parentId)}
@@ -158,7 +158,7 @@ const Parents = () => {
       ) : (
         <p>Loading</p>
       )}
-    </>
+    </div>
   );
 };
 

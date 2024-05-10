@@ -134,11 +134,11 @@ const ParentModal = ({ active, handleModal, token, id, setErrorMessage, parentDa
   };
 
   return (
-    <div className={`modal ${active && "is-active"} md:w-6/7`}>
+    <div className={`modal ${active && "is-active"} md:w-6/7 `}>
       <div className="modal-background" onClick={handleModal}></div>
       <div className="modal-card">
         <header className="modal-card-head has-background-primary-light">
-          <h1 className="modal-card-title">{id ? "Update Parent" : "Create Parent"}</h1>
+          <h1 className="modal-card-title text-black">{id ? "Update Parent" : "Create Parent"}</h1>
         </header>
         <section className="modal-card-body">
           <form>
@@ -271,7 +271,7 @@ const ParentModal = ({ active, handleModal, token, id, setErrorMessage, parentDa
               Update
             </button>
           ) : (
-            <button className="button is-primary" onClick={handleCreateParent}>
+            <button className="button is-primary mr-2" onClick={handleCreateParent}>
               Create
             </button>
           )}

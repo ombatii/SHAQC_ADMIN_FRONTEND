@@ -13,9 +13,14 @@ import { UserProvider } from './contexts/UserContext'; // Import UserProvider
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [token, setToken] = useState(localStorage.getItem('awesomeLeadsToken'));
-  const [currentMode, setCurrentMode] = useState(localStorage.getItem('themeMode') || 'Light');
+  const [currentMode, setCurrentMode] = useState(localStorage.getItem('Light') || 'Light');
   const [currentColor, setCurrentColor] = useState(localStorage.getItem('colorMode') || '#007bff');
   const [themeSettings, setThemeSettings] = useState(false);
+
+
+  
+
+  console.log(themeSettings)
 
   useEffect(() => {
     if (token) {
@@ -47,7 +52,7 @@ const App = () => {
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
-          <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
+          {/* <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
             <TooltipComponent content="Settings" position="Top">
               <button
                 type="button"
@@ -58,7 +63,7 @@ const App = () => {
                 <FiSettings />
               </button>
             </TooltipComponent>
-          </div>
+          </div> */}
           <div className="w-full min-h-screen flex-2">
             <div>
               <UserProvider>
@@ -120,6 +125,7 @@ const App = () => {
           </div>
         </div>
       </BrowserRouter>
+  
     </div>
   );
 };

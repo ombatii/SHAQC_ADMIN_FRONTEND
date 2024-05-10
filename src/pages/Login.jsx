@@ -130,8 +130,7 @@ const Login = () => {
           <div className="col-lg-7 d-flex justify-content-center align-items-center">
             <div className="login-card py-lg-0 py-5">
               <h1 className="fw-bold">SHAQC ADMIN</h1>
-              <h2 className="fw-semibold">Welcome back</h2>
-              <p className="fw-light">Welcome back! Please login to your account</p>
+              <h2 className="fw-semibold">Please login to your account</h2>
               <form className="form" onSubmit={handleSubmit}>
                 <div className="row">
                   <div className="mb-3 col-12">

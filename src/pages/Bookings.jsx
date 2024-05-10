@@ -80,7 +80,7 @@ const Bookings = () => {
   const bookingToUpdate = bookingData ? bookingData.find(booking => booking.bookingId === id) : null;
 
   return (
-    <>
+    <div className="mx-4 overflow-scroll">
       <BookingModal
         active={activeModal}
         handleModal={handleModal}
@@ -127,7 +127,7 @@ const Bookings = () => {
                 </td>
                 <td>{booking.totalCost}</td>
                 <td>{booking.userId}</td> {/* Display User ID */}
-                <td>
+                <td className="grid grid-cols-2">
                   <button
                     className="button mr-2 is-info is-light"
                     onClick={() => handleUpdate(booking.bookingId)}
@@ -148,7 +148,7 @@ const Bookings = () => {
       ) : (
         <p>Loading</p>
       )}
-    </>
+    </div>
   );
 };
 
