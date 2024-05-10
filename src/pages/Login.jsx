@@ -38,6 +38,8 @@ const Login = () => {
         setToken(data.access_token);
         console.log(data)
         navigate('/overview')
+        //reload overview page
+        window.location.reload();
       }
     } catch (error) {
       console.error("Error:", error);
