@@ -90,7 +90,7 @@ const Parents = () => {
         parentData={parentToUpdate}
       />
       <button
-        className="button  mb-5 is-primary"
+        className="button  mb-5 is-primary w-full"
         onClick={() => {
           setId(null);
           setActiveModal(true);
