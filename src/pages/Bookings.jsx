@@ -28,7 +28,7 @@ const Bookings = () => {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/bookings/${bookingId}`,
+        `https://shaqc-admin-backend.onrender.com/bookings/${bookingId}`,
         requestOptions
       );
       if (!response.ok) {
@@ -52,7 +52,7 @@ const Bookings = () => {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/bookings",
+        "https://shaqc-admin-backend.onrender.com/bookings",
         requestOptions
       );
       if (!response.ok) {

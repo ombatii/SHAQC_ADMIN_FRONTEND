@@ -63,7 +63,7 @@ const ParentModal = ({ active, handleModal, token, id, setErrorMessage, parentDa
     };
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/parents", requestOptions);
+      const response = await fetch("https://shaqc-admin-backend.onrender.com/parents", requestOptions);
       if (!response.ok) {
         throw new Error("Something went wrong when creating parent");
       }
@@ -105,7 +105,7 @@ const ParentModal = ({ active, handleModal, token, id, setErrorMessage, parentDa
     };
 
     try {
-      const response = await fetch(`http://127.0.0.1:8000/parents/${id}`, requestOptions);
+      const response = await fetch(`https://shaqc-admin-backend.onrender.com/parents/${id}`, requestOptions);
       if (!response.ok) {
         throw new Error("Something went wrong when updating parent");
       }

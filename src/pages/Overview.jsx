@@ -77,10 +77,10 @@ navigate('/');
     const fetchTeamData = async () => {
       try {
         const endpoints = [
-          "http://127.0.0.1:8000/parents/team/mombasa_rd/count",
-          "http://127.0.0.1:8000/parents/team/kiambu_rd/count",
-          "http://127.0.0.1:8000/parents/team/langata_rd/count",
-          "http://127.0.0.1:8000/parents/team/ngong_rd/count",
+          "https://shaqc-admin-backend.onrender.com/parents/team/mombasa_rd/count",
+          "https://shaqc-admin-backend.onrender.com/parents/team/kiambu_rd/count",
+          "https://shaqc-admin-backend.onrender.com/parents/team/langata_rd/count",
+          "https://shaqc-admin-backend.onrender.com/parents/team/ngong_rd/count",
         ];
 
         const promises = endpoints.map(async (endpoint) => {
@@ -127,9 +127,9 @@ navigate('/');
     const fetchEcomData = async () => {
       try {
         const endpoints = [
-          "http://127.0.0.1:8000/bookings/upcoming/count",
-          "http://127.0.0.1:8000/bookings/cancelled/count",
-          "http://127.0.0.1:8000/bookings/completed/count",
+          "https://shaqc-admin-backend.onrender.com/bookings/upcoming/count",
+          "https://shaqc-admin-backend.onrender.com/bookings/cancelled/count",
+          "https://shaqc-admin-backend.onrender.com/bookings/completed/count",
         ];
 
         const promises = endpoints.map(async (endpoint) => {
@@ -179,7 +179,7 @@ navigate('/');
             Authorization: "Bearer " + token,
           },
         };
-        const response = await fetch("http://127.0.0.1:8000/parents/count", requestOptions);
+        const response = await fetch("https://shaqc-admin-backend.onrender.com/parents/count", requestOptions);
         if (!response.ok) {
           throw new Error("Something went wrong. Couldn't load the leads");
         } else {
@@ -206,7 +206,7 @@ navigate('/');
             Authorization: "Bearer " + token,
           },
         };
-        const response = await fetch("http://127.0.0.1:8000/parents/count", requestOptions);
+        const response = await fetch("https://shaqc-admin-backend.onrender.com/parents/count", requestOptions);
         if (!response.ok) {
           throw new Error("Something went wrong. Couldn't load the leads");
         } else {
@@ -233,7 +233,7 @@ navigate('/');
             Authorization: "Bearer " + token,
           },
         };
-        const response = await fetch("http://127.0.0.1:8000/bookings/count", requestOptions);
+        const response = await fetch("https://shaqc-admin-backend.onrender.com/bookings/count", requestOptions);
         if (!response.ok) {
           throw new Error("Something went wrong. Couldn't load the leads");
         } else {
@@ -260,7 +260,7 @@ navigate('/');
             Authorization: "Bearer " + token,
           },
         };
-        const response = await fetch("http://127.0.0.1:8000/parents/children/count", requestOptions);
+        const response = await fetch("https://shaqc-admin-backend.onrender.com/parents/children/count", requestOptions);
         if (!response.ok) {
           throw new Error("Something went wrong. Couldn't load the leads");
         } else {
@@ -287,7 +287,7 @@ navigate('/');
             Authorization: "Bearer " + token,
           },
         };
-        const response = await fetch("http://127.0.0.1:8000/bookings/children/count", requestOptions);
+        const response = await fetch("https://shaqc-admin-backend.onrender.com/bookings/children/count", requestOptions);
         if (!response.ok) {
           throw new Error("Something went wrong. Couldn't load the leads");
         } else {
@@ -314,7 +314,7 @@ navigate('/');
             Authorization: "Bearer " + token,
           },
         };
-        const response = await fetch("http://127.0.0.1:8000/bookings/totalcost", requestOptions);
+        const response = await fetch("https://shaqc-admin-backend.onrender.com/bookings/totalcost", requestOptions);
         if (!response.ok) {
           throw new Error("Something went wrong. Couldn't load the leads");
         } else {

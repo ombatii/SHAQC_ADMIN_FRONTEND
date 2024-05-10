@@ -53,7 +53,7 @@ const EarningDataComponent = () => {
   useEffect(() => {
     const fetchEarningsData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/earnings');
+        const response = await fetch('https://shaqc-admin-backend.onrender.com/earnings');
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }

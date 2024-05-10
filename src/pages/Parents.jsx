@@ -28,7 +28,7 @@ const Parents = () => {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/parents/${parentId}`,
+        `https://shaqc-admin-backend.onrender.com/parents/${parentId}`,
         requestOptions
       );
       if (!response.ok) {
@@ -52,7 +52,7 @@ const Parents = () => {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/parents",
+        "https://shaqc-admin-backend.onrender.com/parents",
         requestOptions
       );
       if (!response.ok) {

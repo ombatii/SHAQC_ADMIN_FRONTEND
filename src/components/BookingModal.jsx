@@ -53,7 +53,7 @@ const BookingModal = ({ active, handleModal, token, id, setErrorMessage, booking
     };
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/bookings", requestOptions);
+      const response = await fetch("https://shaqc-admin-backend.onrender.com/bookings", requestOptions);
       if (!response.ok) {
         throw new Error("Something went wrong when creating booking");
       }
@@ -93,7 +93,7 @@ const BookingModal = ({ active, handleModal, token, id, setErrorMessage, booking
     };
 
     try {
-      const response = await fetch(`http://127.0.0.1:8000/bookings/${bookingId}`, requestOptions);
+      const response = await fetch(`https://shaqc-admin-backend.onrender.com/bookings/${bookingId}`, requestOptions);
       if (!response.ok) {
         throw new Error("Something went wrong when updating booking");
       }
@@ -116,7 +116,7 @@ const BookingModal = ({ active, handleModal, token, id, setErrorMessage, booking
     };
 
     try {
-      const response = await fetch(`http://127.0.0.1:8000/bookings/${bookingId}`, requestOptions);
+      const response = await fetch(`https://shaqc-admin-backend.onrender.com/bookings/${bookingId}`, requestOptions);
       if (!response.ok) {
         throw new Error("Something went wrong when deleting booking");
       }
